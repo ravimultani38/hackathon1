@@ -407,3 +407,124 @@ td img {
     }
 }
 
+
+/* About Section */
+.about-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    color: #1E3A8A; /* Lighter CUNY Blue */
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    font-size: 22px;
+    color: #1E3A8A; /* Lighter CUNY Blue */
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* Help */
+
+.help-section {
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #1E3A8A, #FFCC00); /* Futuristic gradient background */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Elevated shadow for depth */
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    animation: pulse 5s infinite; /* Subtle pulsing effect */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.help-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffde59; /* Bright yellow for the title */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Space out the letters */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: neon-glow 1.5s ease-in-out infinite alternate; /* Glowing effect on the title */
+}
+
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59, 0 0 30px #ffde59, 0 0 40px #FFCC00, 0 0 70px #FFCC00, 0 0 80px #FFCC00, 0 0 100px #FFCC00, 0 0 150px #FFCC00;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffde59, 0 0 10px #ffde59, 0 0 15px #ffde59, 0 0 20px #FFCC00, 0 0 35px #FFCC00, 0 0 40px #FFCC00, 0 0 50px #FFCC00, 0 0 75px #FFCC00;
+    }
+}
+
+.help-section p {
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Transparent black background for the text */
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Slight glow to the text */
+}
+
+.help-section:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), rgba(0,0,0,0));
+    transform: rotate(30deg);
+    animation: rotate-bg 15s infinite linear;
+    z-index: 0;
+}
+
+@keyframes rotate-bg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

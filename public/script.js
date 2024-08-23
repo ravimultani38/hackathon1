@@ -104,4 +104,20 @@
                 }
             });
         });
+
+        document.getElementById('cunyconnect').addEventListener('click', function() {
+            window.location.href = '/';
+        });  
+
+        document.getElementById('home').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+
+        document.getElementById('about').addEventListener('click', function() {
+            window.location.href = '/about.html';
+        });
         
+        document.getElementById('help').addEventListener('click', function() {
+            window.location.href = '/help.html';
+        });
+              
