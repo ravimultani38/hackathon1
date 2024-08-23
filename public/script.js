@@ -3,7 +3,7 @@
             try {
                 const response = await fetch("/person"); // Fetch all notifications
                 const notifications = await response.json();
-                console.log("notifications: ", notifications);
+                // console.log("notifications: ", notifications);
                 const listingTableBody = document.querySelector("#listingTable tbody");
 
                 notifications.forEach((notification) => {
@@ -64,7 +64,7 @@
                 try {
                     // Make the API call to fetch notifications based on selected options
                     const response = await fetch(`/person?${queryParams.toString()}`);
-                    console.log(response);
+                    // console.log(response);
                     if (!response.ok) throw new Error('Network response was not ok');
         
                     const notifications = await response.json();
@@ -82,7 +82,7 @@
                             row.classList.add(notification.school.toLowerCase());
                             schoolCell.appendChild(schoolIcon);
                             const stringSchool = `${schoolCell}`;
-                            console.log(schoolCell);
+                            // console.log(schoolCell);
                             row.innerHTML = `
                                 <td>${notification.description}</td>
                                 <td>${notification.categories.charAt(0).toUpperCase() + notification.categories.slice(1)}</td>
