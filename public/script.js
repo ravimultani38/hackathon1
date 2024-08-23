@@ -120,4 +120,6 @@
         document.getElementById('help').addEventListener('click', function() {
             window.location.href = '/help.html';
         });
-              
+
+
+        // WE GOT THIS      
