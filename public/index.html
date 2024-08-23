@@ -35,10 +35,11 @@
                 <option value="">Select School</option>
                 <option value="Baruch">Baruch</option>
                 <option value="Brooklyn">Brooklyn</option>
+                <option value="Ccny">CCNY</option>
+                <option value="Citytech">City Tech</option>
+                <option value="Csi">CSI</option>
                 <option value="Hunter">Hunter</option>
                 <option value="Queens">Queens</option>
-                <option value="ccny">CCNY</option>
-                <option value="Citytech">City Tech</option>
             </select>
             
             <select name="timeline">
@@ -87,9 +88,14 @@
                 <div class="input-field">
                     <label for="college">College Name</label>
                     <select id="college" name="college" required>
-                        <option value="Queens College">Queens College</option>
-                        <option value="Brooklyn College">Brooklyn College</option>
-                        <option value="Tech College">Tech College</option>
+                        <option value="">Select School</option>
+                        <option value="Baruch">Baruch</option>
+                        <option value="Brooklyn">Brooklyn</option>
+                        <option value="Ccny">CCNY</option>
+                        <option value="Citytech">City Tech</option>
+                        <option value="Csi">CSI</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Queens">Queens</option>
                     </select>
                 </div>
 
@@ -98,15 +104,19 @@
                     <input type="tel" id="mobile" name="mobile" required>
                 </div>
 
-                <div class="input-field">
-                    <label for="preference">Notification Preference</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="preference" value="SMS"> SMS</label>
-                        <label><input type="checkbox" name="preference" value="Email"> Email</label>
-                    </div>
+                <label for="notification">Preferred Notification:</label>
+                <div id="notification">
+                    <input type="radio" id="email" name="notification" value="email">
+                    <label for="email">Email</label>
+
+                    <input type="radio" id="sms" name="notification" value="sms">
+                    <label for="sms">SMS</label>
+
+                    <input type="radio" id="both" name="notification" value="both">
+                    <label for="both">Both</label>
                 </div>
 
-                <button type="submit" class="submit-btn">Register</button>
+                <button type="submit" class="submit-button">Register</button>
             </form>
         </div>
     </div>

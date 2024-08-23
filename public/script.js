@@ -9,7 +9,7 @@
                 notifications.forEach((notification) => {
                     // Create table row (tr) elements
                     const row = document.createElement("tr");
-                    row.classList.add(notification.tile); // Add class based on school name
+                    // alert(notification.tile);
 
                     // Create and append table cells (td) for each data field
                     const infoCell = document.createElement("td");
@@ -23,6 +23,9 @@
                     const schoolCell = document.createElement("td");
                     const schoolIcon = document.createElement("img");
                     schoolIcon.src = `icons/${notification.school.toLowerCase()}.png`; // Assuming icons are named after school names
+                    // console.log(notification.school.toLowerCase());
+                    row.classList.add(notification.school.toLowerCase());
+                    // console.log(row.classList);
                     schoolCell.appendChild(schoolIcon);
                     row.appendChild(schoolCell);
 
@@ -30,7 +33,7 @@
                     dateCell.textContent = new Date(notification.time).toLocaleDateString();
                     row.appendChild(dateCell);
                     const timeCell = document.createElement("td");
-                    timeCell.textContent = new Date(notification.time).toLocaleTimeString();
+                    timeCell.textContent = new Date(notification.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
                     row.appendChild(timeCell);
 
                     // Append the row to the table body
@@ -40,6 +43,8 @@
                 console.error("Error fetching notifications:", error);
             }
         });
+        
+
         document.addEventListener('DOMContentLoaded', function () {
             const searchButton = document.querySelector('.search-button');
             
@@ -71,12 +76,19 @@
                     if (notifications.length > 0) {
                         notifications.forEach(notification => {
                             const row = document.createElement('tr');
+                            const schoolCell = document.createElement("td");
+                            const schoolIcon = document.createElement("img");
+                            schoolIcon.src = `icons/${notification.school.toLowerCase()}.png`; // Assuming icons are named after school names
+                            row.classList.add(notification.school.toLowerCase());
+                            schoolCell.appendChild(schoolIcon);
+                            const stringSchool = `${schoolCell}`;
+                            console.log(schoolCell);
                             row.innerHTML = `
                                 <td>${notification.description}</td>
-                                <td>${notification.categories}</td>
-                                <td>${notification.school}</td>
+                                <td>${notification.categories.charAt(0).toUpperCase() + notification.categories.slice(1)}</td>
+                                <td><img src="icons/${notification.school.toLowerCase()}.png" alt="${notification.school}"></td>
                                 <td>${new Date(notification.time).toLocaleDateString()}</td>
-                                <td>${new Date(notification.time).toLocaleTimeString()}</td>
+                                <td>${new Date(notification.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</td>
                             `;
                             tbody.appendChild(row);
                         });

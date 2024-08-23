@@ -225,19 +225,24 @@ form input {
 
 #listingTable thead th:nth-child(1),
 #listingTable tbody td:nth-child(1) {
-    width: 60%; /* Makes the Info column wider */
+    width: 56%; /* Makes the Info column wider */
 }
 
 #listingTable thead th:nth-child(2),
 #listingTable tbody td:nth-child(2),
 #listingTable thead th:nth-child(4),
 #listingTable tbody td:nth-child(4) {
-    width: 10%;
+    width: 7%;
 }
 
 #listingTable thead th:nth-child(3),
 #listingTable tbody td:nth-child(3) {
     width: 20%; /* Equal width for Type, School, and Data columns */
+}
+
+#listingTable thead th:nth-child(5),
+#listingTable tbody td:nth-child(5) {
+    width: 10%; /* Equal width for Type, School, and Data columns */
 }
 
 td img {
@@ -263,7 +268,7 @@ td img {
     background-color: #f9b2b2;
 }
 
-.ccny {
+.tech {
     background-color: rgba(120, 51, 125, 0.5)
 }
 
