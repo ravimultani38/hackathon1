@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUNY Connect</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">CUNY Connect</h1>
+        <nav class="navbar">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Notifications</a>
+            <a href="#" class="nav-link">Settings</a>
+            <a href="#" class="nav-link">Help</a>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <main class="main-content">
+            <section class="card">
+                <div class="card-icon">
+                    <span class="material-icons">notifications</span>
+                </div>
+                <div class="card-content">
+                    <h2>Food Pantry Updates</h2>
+                    <p>Get the latest information about food pantry availability and schedules.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-icon">
+                    <span class="material-icons">local_library</span>
+                </div>
+                <div class="card-content">
+                    <h2>Library Alerts</h2>
+                    <p>Stay informed about library hours, new arrivals, and special events.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-icon">
+                    <span class="material-icons">fitness_center</span>
+                </div>
+                <div class="card-content">
+                    <h2>Gym Notifications</h2>
+                    <p>Receive updates on gym schedules, classes, and maintenance closures.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-icon">
+                    <span class="material-icons">warning</span>
+                </div>
+                <div class="card-content">
+                    <h2>Fire Drill Alerts</h2>
+                    <p>Be alerted about upcoming fire drills and safety procedures.</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="registration-form">
+            <h2>Register for Notifications</h2>
+            <form id="registerForm">
+                <div class="input-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="college">College Name</label>
+                    <select id="college" name="college" required>
+                        <option value="Queens College">Queens College</option>
+                        <option value="Brooklyn College">Brooklyn College</option>
+                        <option value="Tech College">Tech College</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="preference">Notification Preference</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="preference" value="SMS"> SMS</label>
+                        <label><input type="checkbox" name="preference" value="Email"> Email</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 CUNY Connect. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="registeration.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUNY Connect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Menu -->
+    <div class="menu">
+        <div class="menu-left">
+            <h1>CUNY Connect</h1>
+        </div>
+        <div class="menu-right">
+            <button class="menu-button">Home</button>
+            <button class="menu-button">About</button>
+            <button class="menu-button">Settings</button>
+            <button class="menu-button">Help</button>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+        <div class="filter-group">
+            <select name="type">
+                <option value="">Select Type</option>
+                <option value="food">Food Pantry Info</option>
+                <option value="library">Library Updates</option>
+                <option value="gym">Gym Notification</option>
+                <option value="fire">Fire Drill Alerts</option>
+            </select>
+
+            <select name="school">
+                <option value="">Select School</option>
+                <option value="Baruch">Baruch</option>
+                <option value="Brooklyn">Brooklyn</option>
+                <option value="Hunter">Hunter</option>
+                <option value="Queens">Queens</option>
+                <option value="ccny">CCNY</option>
+                <option value="Citytech">City Tech</option>
+            </select>
+            
+            <select name="timeline">
+                <option value="">Select Timeline</option>
+                <option value="day">Within a Day</option>
+                <option value="week">Within a Week</option>
+                <option value="month">Within a Month</option>
+            </select>
+            <button type="button" class="search-button">Search</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Listing Section -->
+        <div class="listing">
+            <table id="listingTable">
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Type</th>
+                        <th>School</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically added here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <form id="registerForm">
+                <div class="input-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="college">College Name</label>
+                    <select id="college" name="college" required>
+                        <option value="Queens College">Queens College</option>
+                        <option value="Brooklyn College">Brooklyn College</option>
+                        <option value="Tech College">Tech College</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="preference">Notification Preference</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="preference" value="SMS"> SMS</label>
+                        <label><input type="checkbox" name="preference" value="Email"> Email</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 CUNY Connect. All rights reserved. Built for CTP Hackathon.</p>
+    </div>
+
+   
+    <script src="script.js"></script>
+    <script src="registeration.js"></script>
+</body>
+</html>

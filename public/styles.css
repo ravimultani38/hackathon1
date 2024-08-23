@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: #1E3A8A; /* Lighter CUNY Blue */
+    color: #FFCC00; /* Lighter CUNY Yellow */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFCC00; /* Lighter CUNY Yellow */
+}
+
+.menu-right {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-button {
+    background-color: transparent;
+    color: #FFCC00; /* Lighter CUNY Yellow */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #2C4DAB; 
+    border-radius: 4px;
+}
+
+.filters {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 63%;
+}
+
+.filter-group select {
+    margin-right: 15px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #1E3A8A; 
+    color: #FFCC00; 
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-button:hover {
+    background-color: #2C4DAB; 
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px
+}
+
+
+.form-section {
+    width: 33.33%;
+    background-color: #e8e8e8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 34px;
+    resize: none;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 34px; /* Fixed height */
+    overflow: hidden; /* Hide scrollbar */
+    resize: none; /* Disable resizing */
+}
+
+#notification {
+    display: flex;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 15px;
+}
+
+#notification input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    appearance: none;
+    border: 2px solid #1E3A8A; /* Lighter CUNY Blue */
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+#notification input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #1E3A8A; /* Lighter CUNY Blue */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#notification label {
+    margin-right: 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    background-color: #1E3A8A; /* Lighter CUNY Blue */
+    color: #FFCC00; /* Lighter CUNY Yellow */
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-button:hover {
+    background-color: #2C4DAB; /* Slightly darker than Lighter CUNY Blue */
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
+.footer {
+    background-color: #1E3A8A; /* Lighter CUNY Blue */
+    color: #FFCC00; /* Lighter CUNY Yellow */
+    text-align: center;
+    padding: 5px 0; /* Reduced padding */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px; /* Smaller font size */
+}
+
+
+.listing {
+    width: 66%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 75vh;
+    /* height: 600px; */
+    overflow-y: auto; /* Adds vertical scrollbar if content exceeds the height */
+    margin: 0; /* Ensures no extra margin around the container */
+    /* padding: 0; Ensures no extra padding around the container */
+
+}
+
+
+#listingTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#listingTable th, #listingTable td {
+    padding: 10px; /* Adds padding for better readability */
+    text-align: left; /* Aligns text to the left */
+    border: none; /* Removes borders */
+}
+
+#listingTable th {
+    background-color: #f4f4f4; /* Light gray background for header */
+}
+
+#listingTable td {
+    border-bottom: 1px solid #ddd; /* Light border for separation between rows */
+}
+
+#listingTable thead th:nth-child(1),
+#listingTable tbody td:nth-child(1) {
+    width: 60%; /* Makes the Info column wider */
+}
+
+#listingTable thead th:nth-child(2),
+#listingTable tbody td:nth-child(2),
+#listingTable thead th:nth-child(4),
+#listingTable tbody td:nth-child(4) {
+    width: 10%;
+}
+
+#listingTable thead th:nth-child(3),
+#listingTable tbody td:nth-child(3) {
+    width: 20%; /* Equal width for Type, School, and Data columns */
+}
+
+td img {
+    width: 100px; /* Sets the width of the image */
+    height: 75px; /* Maintains the aspect ratio */
+    display: block; /* Removes extra space below the image */
+    margin: 0 auto; /* Centers the image */
+}
+
+.brooklyn {
+    background-color: rgba(255, 4, 4, 0.5);
+}
+
+.baruch {
+    background-color: rgb(127, 155, 255);
+}
+
+.hunter {
+    background-color: rgba(76, 44, 127, 0.7);
+}
+
+.queens {
+    background-color: #f9b2b2;
+}
+
+.ccny {
+    background-color: rgba(120, 51, 125, 0.5)
+}
+
+.cuny {
+    background-color: rgba(17, 32, 170, 0.6);
+}
+
+
+/* Base Styles (Already in your CSS) */
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+
+    /* Menu */
+    .menu-left h1 {
+        font-size: 18px; /* Smaller font size for the project name */
+    }
+
+    .menu-button {
+        font-size: 14px; /* Smaller font size for the menu buttons */
+        padding: 5px 8px; /* Adjust padding to make it more compact */
+    }
+
+    /* Filters */
+    .filter-group {
+        width: 100%; /* Make the filters take full width */
+        flex-direction: column; /* Stack filters vertically */
+    }
+
+    .filter-group select, .search-button {
+        margin-bottom: 10px; /* Add margin between stacked elements */
+        width: 100%; /* Make filters and search button take full width */
+        padding: 8px; /* Adjust padding for a more compact touch experience */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Content */
+    .content {
+        flex-direction: column; /* Stack listing and form section vertically */
+        gap: 10px;
+    }
+
+    .listing, .form-section {
+        width: 100%; /* Full width for both sections on mobile */
+        padding: 0px; /* Adjust padding for a more compact layout */
+    }
+
+    .listing {
+        /* height: auto; */
+        min-height: 100%;
+        height: 60vh;
+        resize: none;
+    }
+
+    .form-section {
+        margin-top: 20px; /* Add space between listing and form section */
+    }
+
+    /* Table Rows */
+    #listingTable th, #listingTable td {
+        padding: 5px 8px; /* Reduce padding to make rows more compact */
+        font-size: 12px; /* Smaller font size for table content */
+    }
+
+    #listingTable thead th {
+        background-color: #f4f4f4; /* Light gray background for header */
+    }
+
+    #listingTable td {
+        border-bottom: 1px solid #ddd; /* Light border for separation between rows */
+    }
+
+    td img {
+        width: 50px; /* Sets the width of the image */
+        height: 30px; /* Maintains the aspect ratio */
+        display: block; /* Removes extra space below the image */
+        margin: 0 auto; /* Centers the image */
+    }
+
+    .form-section {
+        /* width: 33.33%; */
+        background-color: #e8e8e8;
+        padding: 7px; /* Reduced padding for a smaller form */
+        box-sizing: border-box;
+    }
+    
+    form label {
+        display: block;
+        margin-bottom: 3px; /* Reduced margin between labels and inputs */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+    
+    form select, form textarea, form input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin between form elements */
+        padding: 6px; /* Reduced padding inside inputs */
+        font-size: 14px; /* Slightly smaller font size */
+        box-sizing: border-box;
+        height: 30px; /* Reduced height for inputs */
+        resize: none; /* Disable resizing */
+    }
+    
+    form textarea {
+        height: 30px; /* Match the height of the other inputs */
+        overflow: hidden; /* Hide scrollbar */
+    }
+    
+    #notification {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Reduced gap between notification options */
+    }
+    
+    #notification label {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+    
+    #notification input[type="radio"] {
+        width: 14px; /* Reduced size for the square radio buttons */
+        height: 14px; /* Reduced size for the square radio buttons */
+    }
+    
+    .submit-button {
+        padding: 8px 12px; /* Reduced padding for the submit button */
+        font-size: 14px; /* Maintain font size for legibility */
+        margin-top: 15px; /* Reduced margin at the top of the button */
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+
+    /* Footer */
+    .footer {
+        /* font-size: 11px; Smaller font for footer text */
+        display: none;
+    }
+}
+
