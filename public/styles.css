@@ -272,7 +272,10 @@ td img {
 .tech {
     background-color: rgba(120, 51, 125, 0.5)
 }
-
+.csi {
+    background-color: rgba(37, 171, 216, 0.5);
+    /* background-color: rgba(32, 142, 178, 0.5); */
+}
 .cuny {
     background-color: rgba(17, 32, 170, 0.6);
 }

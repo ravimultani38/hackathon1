@@ -1,12 +1,31 @@
-
+function shuffle(array) {
+    let currentIndex = array.length;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+}
+  
         document.addEventListener("DOMContentLoaded", async () => {
             try {
                 const response = await fetch("/person"); // Fetch all notifications
                 const notifications = await response.json();
                 // console.log("notifications: ", notifications);
                 const listingTableBody = document.querySelector("#listingTable tbody");
-
+                shuffle(notifications);
                 notifications.forEach((notification) => {
+                    // console.log(notification.school)
+                    // console.log(notification.school === "CityTech");
+                    if (!notification.school.includes("CityTech")){
+                        
                     // Create table row (tr) elements
                     const row = document.createElement("tr");
                     // alert(notification.tile);
@@ -25,7 +44,7 @@
                     schoolIcon.src = `icons/${notification.school.toLowerCase()}.png`; // Assuming icons are named after school names
                     // console.log(notification.school.toLowerCase());
                     row.classList.add(notification.school.toLowerCase());
-                    // console.log(row.classList);
+                    console.log(row.classList);
                     schoolCell.appendChild(schoolIcon);
                     row.appendChild(schoolCell);
 
@@ -38,6 +57,7 @@
 
                     // Append the row to the table body
                     listingTableBody.appendChild(row);
+                    }
                 });
             } catch (error) {
                 console.error("Error fetching notifications:", error);
@@ -53,7 +73,7 @@
                 const categories = document.querySelector('select[name="type"]').value;
                 const school = document.querySelector('select[name="school"]').value;
                 const timeline = document.querySelector('select[name="timeline"]').value;
-        
+                console.log(school);
                 // Build the query string
                 const queryParams = new URLSearchParams({
                     categories: categories,
@@ -75,6 +95,7 @@
         
                     if (notifications.length > 0) {
                         notifications.forEach(notification => {
+                            if (!notification.school.includes("CityTech")){
                             const row = document.createElement('tr');
                             const schoolCell = document.createElement("td");
                             const schoolIcon = document.createElement("img");
@@ -91,6 +112,7 @@
                                 <td>${new Date(notification.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</td>
                             `;
                             tbody.appendChild(row);
+                            }
                         });
                     } else {
                         // No notifications found
