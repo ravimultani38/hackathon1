@@ -7,7 +7,8 @@ CUNY Connect is a centralized platform designed to keep students, faculty, and s
 To get started, simply access the platform, customize your notification preferences, and stay up-to-date with the latest information from your campus. The platform is user-friendly and mobile-responsive, ensuring easy access on any device.
 
 ### How to get it running:
-```git clone https://github.com/yourusername/cuny-connect.git
+```
+git clone https://github.com/yourusername/cuny-connect.git
 cd hackathon1
 npm i
 node server.js
